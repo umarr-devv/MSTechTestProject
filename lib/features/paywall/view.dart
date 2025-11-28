@@ -12,11 +12,6 @@ class PaywallScreen extends StatefulWidget {
 }
 
 class _PaywallScreenState extends State<PaywallScreen> {
-  @override
-  void initState() {
-    super.initState();
-    FlutterNativeSplash.remove();
-  }
 
   @override
   Widget build(BuildContext context) {

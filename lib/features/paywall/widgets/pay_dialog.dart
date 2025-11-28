@@ -1,5 +1,9 @@
+import 'package:app/core/router/router.dart';
+import 'package:app/data/repositories/repositories.dart';
 import 'package:app/shared/theme/theme.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 class PatwallPayDialog extends StatefulWidget {
   const PatwallPayDialog({super.key});
@@ -61,7 +65,16 @@ class _PatwallPayDialogState extends State<PatwallPayDialog> {
           SizedBox(
             width: double.infinity,
             child: TextButton(
-              onPressed: () {},
+              onPressed: () async {
+                final storage = GetIt.I<SecureStorage>();
+                await storage.write(
+                  SecureStorageKey.subscribtion,
+                  DateTime.now()
+                      .add(Duration(days: activeIndex == 0 ? 28 : 365))
+                      .toIso8601String(),
+                );
+                AutoRouter.of(context).push(HomeRoute());
+              },
               style: TextButton.styleFrom(
                 backgroundColor: theme.custom.primaryColor,
                 shape: RoundedRectangleBorder(

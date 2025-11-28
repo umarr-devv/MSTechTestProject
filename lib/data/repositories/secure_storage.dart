@@ -1,6 +1,6 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-enum SecureStorageKey { accessToken }
+enum SecureStorageKey { accessToken, subscribtion }
 
 class SecureStorage {
   late final FlutterSecureStorage storage;
@@ -13,7 +13,7 @@ class SecureStorage {
     return await storage.read(key: key.name);
   }
 
-  Future write(SecureStorageKey key, String value) async {
+  Future write(SecureStorageKey key, dynamic value) async {
     await storage.write(key: key.name, value: value);
   }
 

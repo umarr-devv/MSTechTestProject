@@ -9,8 +9,8 @@ part 'router.gr.dart';
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-    AutoRoute(page: PaywallRoute.page, initial: true),
-    AutoRoute(page: InitRoute.page),
+    AutoRoute(page: InitRoute.page, initial: true),
+    AutoRoute(page: PaywallRoute.page),
     AutoRoute(page: HomeRoute.page),
   ];
 }
