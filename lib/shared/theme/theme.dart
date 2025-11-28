@@ -11,7 +11,7 @@ class CustomThemeData {
     return brightness == Brightness.light ? light : dark;
   }
 
-  Color get primaryColor => Color(0xff6200ee);
+  Color get primaryColor => Color(0xff5b78ec);
 
   Color get primaryBackground {
     return by(light: const Color(0xFFffffff), dark: const Color(0xFF000000));
