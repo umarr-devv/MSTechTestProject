@@ -1,3 +1,4 @@
+import 'package:app/features/paywall/widgets/widgets.dart';
 import 'package:app/shared/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,9 @@ class PaywallOpenPayButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       width: double.infinity,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          PatwallPayDialog().show(context);
+        },
         style: TextButton.styleFrom(
           backgroundColor: theme.custom.primaryColor,
           shape: RoundedRectangleBorder(
