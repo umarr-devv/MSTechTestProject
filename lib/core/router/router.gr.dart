@@ -41,3 +41,19 @@ class InitRoute extends PageRouteInfo<void> {
     },
   );
 }
+
+/// generated route for
+/// [PaywallScreen]
+class PaywallRoute extends PageRouteInfo<void> {
+  const PaywallRoute({List<PageRouteInfo>? children})
+    : super(PaywallRoute.name, initialChildren: children);
+
+  static const String name = 'PaywallRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PaywallScreen();
+    },
+  );
+}
