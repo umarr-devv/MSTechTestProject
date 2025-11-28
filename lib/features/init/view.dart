@@ -31,10 +31,12 @@ class _InitScreenState extends State<InitScreen> {
       final DateTime subscriptionDate = DateTime.parse(subscription);
 
       if (subscriptionDate.compareTo(DateTime.now()) > 0) {
+        // ignore: use_build_context_synchronously
         AutoRouter.of(context).push(HomeRoute());
         return;
       }
     }
+    // ignore: use_build_context_synchronously
     AutoRouter.of(context).push(PaywallRoute());
   }
 

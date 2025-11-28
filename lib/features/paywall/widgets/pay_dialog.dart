@@ -73,6 +73,7 @@ class _PatwallPayDialogState extends State<PatwallPayDialog> {
                       .add(Duration(days: activeIndex == 0 ? 28 : 365))
                       .toIso8601String(),
                 );
+                // ignore: use_build_context_synchronously
                 AutoRouter.of(context).push(HomeRoute());
               },
               style: TextButton.styleFrom(
